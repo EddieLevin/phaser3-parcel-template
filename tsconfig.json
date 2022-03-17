@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "esnext",
 		"module": "esnext",
-		"strict": true,
+		"strict": false,
 		"noImplicitAny": false,
 		"noEmit": true,
 		"allowJs": true,
@@ -14,6 +14,7 @@
 		"allowSyntheticDefaultImports": true,
 		"sourceMap": true,
 		"baseUrl": "./src",
+		"strictPropertyInitialization": false,
 		"paths": {
 		  "~/*": ["./*"]
 		},
@@ -22,7 +23,8 @@
 			"node_module/phaser/types"
 		],
 		"types": [
-			"Phaser"
+			"Phaser",
+			"Node"
 		]
 	  },
 	  "include": ["src/**/*"]

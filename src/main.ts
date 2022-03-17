@@ -1,18 +1,25 @@
 import Phaser from 'phaser'
 
-import HelloWorldScene from './scenes/HelloWorldScene'
+import BootScene from './scenes/BootScene'
+import PlayScene from './scenes/PlayScene'
 
-const config : Phaser.Types.Core.GameConfig = {
-	type: Phaser.AUTO,
-	width: 800,
-	height: 600,
-	physics: {
-		default: 'arcade',
-		arcade: {
-			gravity: { y: 200 }
-		}
-	},
-	scene: [HelloWorldScene]
+export const config = {
+    width:256,
+    height: 272,
+    backgroundColor: 0x353956,
+    scene: [BootScene, PlayScene],
+    pixleArt: true,
+    physics: {
+        default: "arcade",
+        arcade: {debug:false}
+    }
+}
+
+export const gameSettings = {
+    playerSpeed : 100,
+    enemySpeed : 40,
+    spawnRate : 300, // lower number = more frequent spawns
+    startingLives : 3,
 }
 
 export default new Phaser.Game(config)
